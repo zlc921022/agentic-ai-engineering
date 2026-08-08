@@ -15,7 +15,7 @@
 ```bash
 python3.10 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-cp ../.env.example .env
+cp ../.env.example ../.env
 cd src/frontend && npm ci && cd ../..
 .venv/bin/python dev.py
 ```

@@ -35,3 +35,4 @@ load_tests/results/
 .idea/
 .vscode/
 *.swp
+/.env

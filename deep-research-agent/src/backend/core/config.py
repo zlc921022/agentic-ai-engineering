@@ -2,7 +2,7 @@
 
 配置优先级：
 1. 代码中的安全默认值；
-2. deep-research-agent/.env 或当前进程环境变量；
+2. 仓库根目录 .env 或当前进程环境变量；
 3. 调用 Config.from_env(...) 时显式传入的覆盖值。
 
 这里只维护当前工作台真正需要的运行参数，不把 prompt、评分规则等业务策略
@@ -23,9 +23,10 @@ except Exception:  # pragma: no cover - optional dependency
 
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[3]
+REPOSITORY_ROOT = PACKAGE_ROOT.parent
 if load_dotenv is not None:
-    # 终端临时 export 的变量优先级高于项目 .env。
-    load_dotenv(PACKAGE_ROOT / ".env", override=False)
+    # 终端临时 export 的变量优先级高于仓库根目录 .env。
+    load_dotenv(REPOSITORY_ROOT / ".env", override=False)
 
 
 def _env_bool(name: str, default: bool) -> bool:

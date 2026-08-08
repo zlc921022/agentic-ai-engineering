@@ -42,6 +42,8 @@ flowchart LR
 
 ![Deep Research Agent 工作台](docs/images/deep-research-workbench.png)
 
+真实运行：并行完成 4 个研究任务、汇聚 20 条来源，引用质检得分 100。
+
 ## Enterprise RAG Assistant
 
 围绕企业制度与经营资料构建多知识库问答系统，以统一服务层编排路由、检索、生成、引用和评估，并提供 LangGraph Agentic RAG 模式。
@@ -74,6 +76,8 @@ flowchart LR
 
 ![Enterprise RAG Assistant 调试台](docs/images/enterprise-rag-console.png)
 
+真实运行：基于 LangGraph Agent 完成意图路由、知识检索、反思修订与证据引用。
+
 ## 本地启动
 
 环境要求：Python 3.10+、Node.js 18+。两个子项目使用独立虚拟环境，避免依赖互相影响。
@@ -85,7 +89,7 @@ cd deep-research-agent
 python3.10 -m venv .venv
 .venv/bin/pip install -U pip
 .venv/bin/pip install -r requirements.txt
-cp ../.env.example .env
+cp ../.env.example ../.env
 
 cd src/frontend
 npm ci
@@ -102,7 +106,7 @@ cd enterprise-rag-assistant
 python3.10 -m venv .venv
 .venv/bin/pip install -U pip
 .venv/bin/pip install -r requirements.txt
-cp ../.env.example .env
+cp ../.env.example ../.env
 .venv/bin/python app.py
 ```
 

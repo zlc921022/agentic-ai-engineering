@@ -381,7 +381,7 @@ npm install
 
 ```bash
 cd deep-research-agent
-cp .env.example .env
+cp ../.env.example ../.env
 ```
 
 至少配置：

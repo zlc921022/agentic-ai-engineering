@@ -12,7 +12,7 @@ class PreviewService:
     """Fail clearly if someone submits a query from UI-only preview mode."""
 
     def answer(self, *_args, **_kwargs):
-        raise RuntimeError("当前为 UI Preview，请配置 .env 并启动正式服务。")
+        raise RuntimeError("当前为 UI Preview，请配置仓库根目录 .env 并启动正式服务。")
 
 
 def main() -> None:
