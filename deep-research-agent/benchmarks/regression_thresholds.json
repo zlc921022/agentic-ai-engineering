@@ -1,0 +1,18 @@
+{
+  "absolute": {
+    "min_success_rate": 1.0,
+    "min_average_overall_score": 80,
+    "max_hard_error_count": 0,
+    "min_trace_complete_rate": 1.0,
+    "min_tool_parameter_accuracy": 1.0,
+    "min_supplemental_search_success_rate": 0.8,
+    "max_rule_fallback_rate": 0.2
+  },
+  "relative": {
+    "max_success_rate_drop": 0.0,
+    "max_average_overall_score_drop": 5.0,
+    "max_p95_elapsed_increase_ratio": 0.35,
+    "max_total_tokens_increase_ratio": 0.3,
+    "max_estimated_cost_increase_ratio": 0.3
+  }
+}

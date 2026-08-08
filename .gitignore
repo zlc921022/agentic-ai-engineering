@@ -1,0 +1,37 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+
+# Runtime outputs
+logs/
+**/logs/
+deep-research-agent/notes/
+storage/
+**/storage/
+benchmarks/runs/
+benchmarks/reports/
+load_tests/results/
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,32 @@
+[
+  {
+    "case_id": "rag_hallucination",
+    "topic": "企业知识库 RAG 系统产生幻觉的主要原因、评估方法和生产治理方案是什么？请结合可靠来源分析。",
+    "description": "覆盖 RAG 可靠性、评估与工程治理。"
+  },
+  {
+    "case_id": "agent_architecture",
+    "topic": "AI Agent 的主流架构、工具调用机制、记忆系统和生产落地挑战分别是什么？请给出有来源依据的研究总结。",
+    "description": "覆盖 Agent 架构、工具、记忆和生产问题。"
+  },
+  {
+    "case_id": "retrieval_quality",
+    "topic": "如何系统提升 RAG 的检索质量？请研究查询改写、混合检索、重排序、上下文压缩和召回评估的作用与权衡。",
+    "description": "覆盖搜索上下文与检索增强策略。"
+  },
+  {
+    "case_id": "deep_research_workflow",
+    "topic": "一个可用于生产的 Deep Research 系统应如何设计规划、并发搜索、证据管理、报告生成和可观测性流程？",
+    "description": "覆盖本项目核心工作流与并发设计。"
+  },
+  {
+    "case_id": "agent_evaluation",
+    "topic": "AI Agent 在生产环境中应如何评测和调试？请研究任务成功率、工具调用、轨迹、成本、延迟和安全性指标。",
+    "description": "覆盖 Agent 评测与可观测性。"
+  },
+  {
+    "case_id": "mcp_security",
+    "topic": "Model Context Protocol（MCP）在企业 Agent 落地中有哪些安全风险和治理措施？请重点分析权限、数据泄露和工具供应链。",
+    "description": "覆盖协议、工具调用与安全治理。"
+  }
+]

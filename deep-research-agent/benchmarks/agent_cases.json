@@ -1,0 +1,90 @@
+[
+  {
+    "case_id": "valid_supplemental_tool_call",
+    "scenario": "tool_call",
+    "arguments": "{\"query\":\"AI Agent production failure cases\",\"focus\":\"limitations\",\"reason\":\"缺少真实失败案例\"}",
+    "search_behavior": "success",
+    "expected": {
+      "tool_call_compliant": true,
+      "parameter_valid": true,
+      "tool_execution_success": true,
+      "supplemental_search_success": true,
+      "duplicate_suppressed": false
+    }
+  },
+  {
+    "case_id": "reject_protected_runtime_argument",
+    "scenario": "tool_call",
+    "arguments": "{\"query\":\"AI Agent production failures\",\"focus\":\"limitations\",\"reason\":\"缺少真实失败案例\",\"backend\":\"internal\"}",
+    "search_behavior": "success",
+    "expected": {
+      "tool_call_compliant": true,
+      "parameter_valid": false,
+      "tool_execution_success": false,
+      "supplemental_search_success": false
+    }
+  },
+  {
+    "case_id": "reject_invalid_json_arguments",
+    "scenario": "tool_call",
+    "arguments": "{\"query\":\"broken json\"",
+    "search_behavior": "success",
+    "expected": {
+      "tool_call_compliant": true,
+      "parameter_valid": false,
+      "tool_execution_success": false,
+      "supplemental_search_success": false
+    }
+  },
+  {
+    "case_id": "suppress_duplicate_tool_call",
+    "scenario": "duplicate_tool_call",
+    "arguments": "{\"query\":\"AI Agent production failure cases\",\"focus\":\"limitations\",\"reason\":\"缺少真实失败案例\"}",
+    "search_behavior": "success",
+    "expected": {
+      "tool_call_compliant": true,
+      "parameter_valid": true,
+      "tool_execution_success": true,
+      "supplemental_search_success": true,
+      "duplicate_suppressed": true
+    }
+  },
+  {
+    "case_id": "normalize_tool_timeout",
+    "scenario": "tool_call",
+    "arguments": "{\"query\":\"AI Agent production failure cases\",\"focus\":\"limitations\",\"reason\":\"缺少真实失败案例\"}",
+    "search_behavior": "timeout",
+    "expected": {
+      "tool_call_compliant": true,
+      "parameter_valid": true,
+      "tool_execution_success": false,
+      "supplemental_search_success": false,
+      "error_code": "TOOL_TIMEOUT"
+    }
+  },
+  {
+    "case_id": "detect_forced_call_non_compliance",
+    "scenario": "no_tool_call",
+    "expected": {
+      "tool_call_compliant": false,
+      "tool_execution_success": false,
+      "supplemental_search_success": false
+    }
+  },
+  {
+    "case_id": "function_retry_uses_tool_result",
+    "scenario": "search_retry_success",
+    "expected": {
+      "supplemental_search_success": true,
+      "fallback_used": false
+    }
+  },
+  {
+    "case_id": "function_retry_falls_back_to_rule",
+    "scenario": "search_retry_fallback",
+    "expected": {
+      "supplemental_search_success": false,
+      "fallback_used": true
+    }
+  }
+]
