@@ -35,10 +35,10 @@ flowchart LR
 
 核心技术亮点：
 
-- 以 Planner、并发 TaskExecutor、Reporter、Evaluator 和 Reflection 构建研究闭环，单任务失败不阻塞全局流程。
-- 通过来源评分、域名多样性和质量门触发补检索；Function Calling 异常时自动回退确定性策略。
-- 正文引用、参考文献与证据表由程序统一组装，降低引用漂移和不可追溯结论。
-- SSE 全链路事件建模，配套离线 Agent Eval、固定问题集回归门禁与 Locust 阶梯压测。
+- 编排 `Planner → Research → Report → Evaluate → Reflect` 五阶段 Agent 工作流，以节点契约串联规划、执行、评估与修订，形成闭环研究链路。
+- 设计任务级并发与 SSE 事件驱动模型，通过失败隔离、生命周期事件和异常收敛保障长任务可观测性。
+- 构建检索治理层，统一多查询聚合、去重、来源分级与质量门；低质结果触发 Function Calling 补检索，并以规则策略可靠降级。
+- 建立证据质量闭环，以稳定引用 ID 贯通正文、参考文献与证据表，由规则质检、LLM Judge 和 Reflection 驱动修订与回归验证。
 
 ![Deep Research Agent 工作台](docs/images/deep-research-workbench.png)
 
@@ -69,10 +69,10 @@ flowchart LR
 
 核心技术亮点：
 
-- 基于 LangGraph 构建 `plan → retrieve → generate → reflect → revise` 状态图，支持制度、经营及跨库路由。
-- 统一 Chroma、BM25 与向量召回，覆盖 Query Transformation、Rerank、多索引及上下文增强策略。
-- 抽象 LangChain / LlamaIndex / LangGraph 三类实现，通过统一返回模型收敛答案、引用、上下文与调试轨迹。
-- 引入 RAG Triad 在线诊断与 Ragas 离线评估，分离回答相关性、上下文相关性和忠实度问题。
+- 抽象统一问答服务与知识路由层，解耦业务知识和 LangChain / LlamaIndex / LangGraph 实现，标准化上下文、引用与调试轨迹。
+- 构建可插拔高级检索矩阵，覆盖 Hybrid（BM25 + Vector）、Query Rewrite、HyDE、Query2Doc、Query Fusion + RRF 与 LLM Rerank。
+- 以 Parent-Child、Sentence Window、Auto-Merging 重构上下文，结合 Self-RAG 与 LangGraph 串联规划、检索、反思和结果修订。
+- 建立分层质量评估体系，以 RAG Triad 诊断单次链路、Ragas 对比离线策略，量化上下文相关性、回答忠实度与召回质量。
 
 ![Enterprise RAG Assistant 调试台](docs/images/enterprise-rag-console.png)
 
