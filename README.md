@@ -103,7 +103,7 @@ python3.10 -m venv .venv
 .venv/bin/pip install -U pip
 .venv/bin/pip install -r requirements.txt
 cp ../.env.example .env
-.venv/bin/python -m enterprise_employee_assistant.app
+.venv/bin/python app.py
 ```
 
 打开 `http://127.0.0.1:7860`。首次启动会根据示例知识文档构建本地 Chroma 索引。

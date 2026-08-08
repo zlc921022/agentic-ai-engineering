@@ -13,9 +13,9 @@ from ragas.metrics._context_precision import context_precision
 from ragas.metrics._context_recall import context_recall
 from ragas.metrics._faithfulness import faithfulness
 
-from enterprise_employee_assistant.app import build_service
-from enterprise_employee_assistant.src.rag_service import EnterpriseAssistantService
-from enterprise_employee_assistant.src.rag_types import RetrievalOptions, RetrievalStrategy
+from app import build_service
+from src.rag_service import EnterpriseAssistantService
+from src.rag_types import RetrievalOptions, RetrievalStrategy
 
 
 @dataclass

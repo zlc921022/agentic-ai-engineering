@@ -8,10 +8,10 @@ from pathlib import Path
 
 import jieba
 
-from enterprise_employee_assistant.src.config import Config
-from enterprise_employee_assistant.src.data_loader import DataLoader
-from enterprise_employee_assistant.src.index_manager import ChromaIndexManager
-from enterprise_employee_assistant.src.retrieval_enhance import RetrievalEnhancer
+from src.config import Config
+from src.data_loader import DataLoader
+from src.index_manager import ChromaIndexManager
+from src.retrieval_enhance import RetrievalEnhancer
 
 
 jieba.setLogLevel(logging.ERROR)

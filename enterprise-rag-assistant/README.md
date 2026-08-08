@@ -16,7 +16,7 @@
 python3.10 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 cp ../.env.example .env
-.venv/bin/python -m enterprise_employee_assistant.app
+.venv/bin/python app.py
 ```
 
 访问 `http://127.0.0.1:7860`。

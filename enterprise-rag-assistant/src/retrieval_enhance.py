@@ -23,20 +23,20 @@ from langchain_community.retrievers import BM25Retriever
 from langchain_core.documents import Document
 from langchain_core.prompts import PromptTemplate
 
-from enterprise_employee_assistant.src.advanced_retrieval import SentenceWindowRetriever, SentenceWindowConfig, \
+from src.advanced_retrieval import SentenceWindowRetriever, SentenceWindowConfig, \
     AutoMergingRetriever, AutoMergingConfig
-from enterprise_employee_assistant.src.client import QwenChatClient, DashScopeEmbeddingClient
-from enterprise_employee_assistant.src.index_manager import ChromaIndexManager
-from enterprise_employee_assistant.src.multi_index_retriever import MultiIndexRetriever
-from enterprise_employee_assistant.src.rag_types import RerankMethod
-from enterprise_employee_assistant.src.retrieval_types import RetrievalResult
-from enterprise_employee_assistant.src.retrieval_util import (
+from src.client import QwenChatClient, DashScopeEmbeddingClient
+from src.index_manager import ChromaIndexManager
+from src.multi_index_retriever import MultiIndexRetriever
+from src.rag_types import RerankMethod
+from src.retrieval_types import RetrievalResult
+from src.retrieval_util import (
     docs_to_context,
     _jieba_preprocess,
     _dedupe_docs,
     parse_index, )
-from enterprise_employee_assistant.src.retrieval_util import parse_score, parse_lines
-from enterprise_employee_assistant.src.self_rag_retriever import SelfRagRetriever
+from src.retrieval_util import parse_score, parse_lines
+from src.self_rag_retriever import SelfRagRetriever
 
 
 class RetrievalEnhancer:

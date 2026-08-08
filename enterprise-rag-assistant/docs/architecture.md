@@ -1,6 +1,6 @@
 # 架构文档
 
-`enterprise_employee_assistant` 是一个企业知识库问答项目。它把企业制度文档、经营资料、检索增强策略、RAG 评估和 LangGraph Agent 编排放在同一个可运行的 Gradio 应用里。
+`enterprise-rag-assistant` 是一个企业知识库问答项目。它把企业制度文档、经营资料、检索增强策略、RAG 评估和 LangGraph Agent 编排放在同一个可运行的 Gradio 应用里。
 
 ## 总体分层
 

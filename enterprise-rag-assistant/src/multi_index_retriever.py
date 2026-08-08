@@ -5,10 +5,10 @@ from langchain_core.documents import Document
 from langchain_core.stores import InMemoryByteStore
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from enterprise_employee_assistant.src.client import QwenChatClient, DashScopeEmbeddingClient
-from enterprise_employee_assistant.src.index_manager import ChromaIndexManager
-from enterprise_employee_assistant.src.retrieval_util import parse_lines, _dedupe_docs
-from enterprise_employee_assistant.src.retrieval_types import RetrievalResult
+from src.client import QwenChatClient, DashScopeEmbeddingClient
+from src.index_manager import ChromaIndexManager
+from src.retrieval_util import parse_lines, _dedupe_docs
+from src.retrieval_types import RetrievalResult
 
 
 class MultiIndexRetriever:

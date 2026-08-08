@@ -21,9 +21,9 @@ from typing import List, Dict
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 
-from enterprise_employee_assistant.src.client import DashScopeEmbeddingClient
-from enterprise_employee_assistant.src.index_manager import ChromaIndexManager
-from enterprise_employee_assistant.src.retrieval_util import _dedupe_docs
+from src.client import DashScopeEmbeddingClient
+from src.index_manager import ChromaIndexManager
+from src.retrieval_util import _dedupe_docs
 
 
 def _stash_id(*parts):

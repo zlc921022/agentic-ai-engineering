@@ -8,9 +8,9 @@ from langgraph.checkpoint.memory import MemorySaver
 from langgraph.constants import END
 from langgraph.graph import StateGraph
 
-from enterprise_employee_assistant.src.client import QwenChatClient
-from enterprise_employee_assistant.src.index_manager import ChromaIndexManager
-from enterprise_employee_assistant.src.retrieval_util import _extract_json, _dedupe_docs, docs_to_context, \
+from src.client import QwenChatClient
+from src.index_manager import ChromaIndexManager
+from src.retrieval_util import _extract_json, _dedupe_docs, docs_to_context, \
     _collect_references
 
 AgentRoute = Literal["rules", "business", "both"]

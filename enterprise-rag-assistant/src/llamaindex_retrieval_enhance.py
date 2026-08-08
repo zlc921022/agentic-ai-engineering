@@ -16,10 +16,10 @@ from typing import Any, Tuple, Optional, List, Sequence, Dict
 
 from langchain_core.documents import Document
 
-from enterprise_employee_assistant.src.client import DashScopeEmbeddingClient, QwenChatClient
-from enterprise_employee_assistant.src.config import Config
-from enterprise_employee_assistant.src.index_manager import ChromaIndexManager
-from enterprise_employee_assistant.src.retrieval_util import _missing_dependency_message, _dedupe_docs
+from src.client import DashScopeEmbeddingClient, QwenChatClient
+from src.config import Config
+from src.index_manager import ChromaIndexManager
+from src.retrieval_util import _missing_dependency_message, _dedupe_docs
 
 
 def _node_to_langchain_doc(node_with_score: Any) -> Document:

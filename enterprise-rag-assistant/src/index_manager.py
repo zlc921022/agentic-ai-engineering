@@ -6,9 +6,9 @@ import chromadb
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 
-from enterprise_employee_assistant.src.client import DashScopeEmbeddingClient
-from enterprise_employee_assistant.src.config import Config
-from enterprise_employee_assistant.src.data_loader import DataLoader
+from src.client import DashScopeEmbeddingClient
+from src.config import Config
+from src.data_loader import DataLoader
 
 
 class ChromaIndexManager:

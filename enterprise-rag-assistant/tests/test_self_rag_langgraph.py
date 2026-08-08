@@ -4,7 +4,7 @@ import unittest
 
 from langchain_core.documents import Document
 
-from enterprise_employee_assistant.src.retrieval_enhance import RetrievalEnhancer
+from src.retrieval_enhance import RetrievalEnhancer
 
 
 def _doc(text: str, source: str = "rules.md") -> Document:

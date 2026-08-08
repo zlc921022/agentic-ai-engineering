@@ -3,7 +3,7 @@ from typing import Iterable
 from langchain_community.embeddings import DashScopeEmbeddings
 from openai import OpenAI
 
-from enterprise_employee_assistant.src.config import Config
+from src.config import Config
 
 
 class QwenChatClient:

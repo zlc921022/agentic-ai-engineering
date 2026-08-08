@@ -78,7 +78,7 @@ reference
 运行方式：
 
 ```bash
-.venv/bin/python -m enterprise_employee_assistant.src.evaluator
+.venv/bin/python -m src.evaluator
 ```
 
 Ragas 更适合批量对比策略，RAG Triad 更适合单次问答调试。

@@ -7,8 +7,8 @@ import jieba
 from langchain_core.documents import Document
 from langchain_core.retrievers import BaseRetriever
 
-from enterprise_employee_assistant.src.retrieval_enhance import RetrievalEnhancer
-from enterprise_employee_assistant.src.retrieval_types import RetrievalResult
+from src.retrieval_enhance import RetrievalEnhancer
+from src.retrieval_types import RetrievalResult
 
 
 jieba.setLogLevel(logging.ERROR)

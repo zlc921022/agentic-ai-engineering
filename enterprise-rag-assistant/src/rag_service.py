@@ -3,15 +3,15 @@ from typing import Any, Dict, Optional, Sequence
 
 from langchain_core.documents import Document
 
-from enterprise_employee_assistant.src.client import QwenChatClient
-from enterprise_employee_assistant.src.index_manager import ChromaIndexManager
-from enterprise_employee_assistant.src.langgraph_enterprise_agent import EnterpriseLangGraphAgent
-from enterprise_employee_assistant.src.llamaindex_retrieval_enhance import LlamaIndexRetrievalEnhancer
-from enterprise_employee_assistant.src.rag_types import RetrievalOptions, RetrievalStrategy, AnswerPackage
-from enterprise_employee_assistant.src.rag_triad import RAGTriadEvaluator
-from enterprise_employee_assistant.src.retrieval_enhance import RetrievalEnhancer
-from enterprise_employee_assistant.src.retrieval_types import RetrievalResult
-from enterprise_employee_assistant.src.retrieval_util import docs_to_context, _collect_references
+from src.client import QwenChatClient
+from src.index_manager import ChromaIndexManager
+from src.langgraph_enterprise_agent import EnterpriseLangGraphAgent
+from src.llamaindex_retrieval_enhance import LlamaIndexRetrievalEnhancer
+from src.rag_types import RetrievalOptions, RetrievalStrategy, AnswerPackage
+from src.rag_triad import RAGTriadEvaluator
+from src.retrieval_enhance import RetrievalEnhancer
+from src.retrieval_types import RetrievalResult
+from src.retrieval_util import docs_to_context, _collect_references
 
 
 class QueryRouter:

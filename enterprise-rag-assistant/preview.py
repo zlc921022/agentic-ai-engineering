@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import os
 
-from enterprise_employee_assistant.app import _patch_gradio_app
-from enterprise_employee_assistant.src.ui_app import build_gradio_app
+from app import _patch_gradio_app
+from src.ui_app import build_gradio_app
 
 
 class PreviewService:

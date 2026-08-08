@@ -9,8 +9,8 @@ from typing import Sequence
 
 from langchain_core.documents import Document
 
-from enterprise_employee_assistant.src.advanced_rag_types import TriadMetricResult, RAGTriadReport
-from enterprise_employee_assistant.src.client import QwenChatClient
+from src.advanced_rag_types import TriadMetricResult, RAGTriadReport
+from src.client import QwenChatClient
 
 
 class RAGTriadEvaluator:

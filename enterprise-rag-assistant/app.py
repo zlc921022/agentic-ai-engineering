@@ -8,21 +8,21 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+load_dotenv(Path(__file__).resolve().parent / ".env")
 
-from enterprise_employee_assistant.src.client import QwenChatClient, DashScopeEmbeddingClient
-from enterprise_employee_assistant.src.config import Config
-from enterprise_employee_assistant.src.data_loader import DataLoader
-from enterprise_employee_assistant.src.index_manager import ChromaIndexManager
-from enterprise_employee_assistant.src.langgraph_enterprise_agent import EnterpriseLangGraphAgent
-from enterprise_employee_assistant.src.llamaindex_retrieval_enhance import (
+from src.client import QwenChatClient, DashScopeEmbeddingClient
+from src.config import Config
+from src.data_loader import DataLoader
+from src.index_manager import ChromaIndexManager
+from src.langgraph_enterprise_agent import EnterpriseLangGraphAgent
+from src.llamaindex_retrieval_enhance import (
     LlamaIndexRetrievalConfig,
     LlamaIndexRetrievalEnhancer,
 )
-from enterprise_employee_assistant.src.rag_service import EnterpriseAssistantService
-from enterprise_employee_assistant.src.rag_triad import RAGTriadEvaluator
-from enterprise_employee_assistant.src.retrieval_enhance import RetrievalEnhancer
-from enterprise_employee_assistant.src.ui_app import build_gradio_app
+from src.rag_service import EnterpriseAssistantService
+from src.rag_triad import RAGTriadEvaluator
+from src.retrieval_enhance import RetrievalEnhancer
+from src.ui_app import build_gradio_app
 
 
 def _sanitize_gradio_config_dict(config: dict) -> dict:

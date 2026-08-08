@@ -5,9 +5,9 @@ from langchain_core.documents import Document
 from langgraph.constants import END
 from langgraph.graph import StateGraph
 
-from enterprise_employee_assistant.src.client import QwenChatClient
-from enterprise_employee_assistant.src.index_manager import ChromaIndexManager
-from enterprise_employee_assistant.src.retrieval_util import docs_to_context, _is_yes
+from src.client import QwenChatClient
+from src.index_manager import ChromaIndexManager
+from src.retrieval_util import docs_to_context, _is_yes
 
 
 class SelfRagRetriever:

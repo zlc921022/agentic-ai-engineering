@@ -1,8 +1,8 @@
 # Gradio界面
 import gradio as gr
 
-from enterprise_employee_assistant.src.rag_service import EnterpriseAssistantService
-from enterprise_employee_assistant.src.rag_types import RetrievalStrategy, RetrievalOptions, RerankMethod
+from src.rag_service import EnterpriseAssistantService
+from src.rag_types import RetrievalStrategy, RetrievalOptions, RerankMethod
 
 
 def build_gradio_app(service: EnterpriseAssistantService) -> gr.Blocks:
